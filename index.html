@@ -115,7 +115,7 @@
                 </div>
             </div>
             
-            <!-- 【新增】修改管理员密码区域 (仅管理员可见) -->
+            <!-- 修改管理员密码区域 -->
             <div class="admin-only space-y-1.5 px-1 border-t border-slate-800 pt-3 mt-1">
                 <label class="text-[11px] text-slate-400 font-bold" data-i18n="pwdTitle">修改管理员密码 (全站同步)</label>
                 <div class="flex gap-1.5">
@@ -168,33 +168,10 @@
             </form>
         </div>
 
-        <!-- 导航卡片网格 -->
+        <!-- 导航卡片网格 (动态板块与自定义板块均通过云端初始化与渲染) -->
         <div id="main-nav-grid" class="w-full grid grid-cols-1 xl:grid-cols-3 gap-8 mb-8 relative z-10 items-start">
             
-            <div id="card-recommend" class="glass-card rounded-2xl p-6 shadow-xl hover:border-indigo-500/30 transition-all duration-300">
-                <h3 class="text-lg font-semibold text-indigo-400 mb-4 flex items-center"><i class="fas fa-star mr-2.5"></i> <span data-i18n="cardRec">常用推荐</span></h3>
-                <div class="grid grid-cols-2 gap-3">
-                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-indigo-600/20 transition-all"><i class="fab fa-github text-xl text-slate-400"></i> <span class="text-sm font-medium">GitHub</span></a>
-                    <a href="https://www.youtube.com/@kejigongxiang" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-indigo-600/20 transition-all"><i class="fab fa-youtube text-xl text-red-500"></i> <span class="text-sm font-medium">YouTube</span></a>
-                    <a href="https://kjgx668.blogspot.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-indigo-600/20 transition-all"><i class="fas fa-globe text-xl text-blue-400"></i> <span class="text-sm font-medium" data-i18n="linkBlog">科技共享博客</span></a>
-                    <a href="https://x.com/kejigongxiang" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-indigo-600/20 transition-all"><i class="fas fa-tv text-xl text-pink-400"></i> <span class="text-sm font-medium" data-i18n="linkBili">哔哩哔哩</span></a>
-                    <a href="https://www.zhihu.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-indigo-600/20 transition-all"><i class="fab fa-zhihu text-xl text-blue-500"></i> <span class="text-sm font-medium" data-i18n="linkZhihu">知乎</span></a>
-                    <a href="https://weibo.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-indigo-600/20 transition-all"><i class="fab fa-weibo text-xl text-red-400"></i> <span class="text-sm font-medium" data-i18n="linkWeibo">微博</span></a>
-                </div>
-            </div>
-
-            <div id="card-develop" class="glass-card rounded-2xl p-6 shadow-xl hover:border-purple-500/30 transition-all duration-300">
-                <h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><i class="fas fa-code mr-2.5"></i> <span data-i18n="cardDev">效率与开发</span></h3>
-                <div class="grid grid-cols-2 gap-3">
-                    <a href="https://dash.cloudflare.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-purple-600/20 transition-all"><i class="fas fa-cloud text-xl text-orange-400"></i> <span class="text-sm font-medium">Cloudflare</span></a>
-                    <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-purple-600/20 transition-all"><i class="fas fa-robot text-xl text-emerald-400"></i> <span class="text-sm font-medium">ChatGPT</span></a>
-                    <a href="https://juejin.cn" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-purple-600/20 transition-all"><i class="fas fa-book text-xl text-blue-500"></i> <span class="text-sm font-medium" data-i18n="linkJuejin">稀土掘金</span></a>
-                    <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-purple-600/20 transition-all"><i class="fas fa-triangle-exclamation text-xl"></i> <span class="text-sm font-medium">Vercel</span></a>
-                    <a href="https://stackoverflow.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-purple-600/20 transition-all"><i class="fab fa-stack-overflow text-xl text-orange-500"></i> <span class="text-sm font-medium">StackOverflow</span></a>
-                    <a href="https://caniuse.com" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-purple-600/20 transition-all"><i class="fas fa-browser text-xl text-sky-400"></i> <span class="text-sm font-medium">CanIUse</span></a>
-                </div>
-            </div>
-
+            <!-- 站长推荐 (传统云端存储区域) -->
             <div id="card-custom" class="glass-card rounded-2xl p-6 shadow-xl hover:border-pink-500/30 transition-all duration-300 xl:col-span-1">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-lg font-semibold text-pink-400 flex items-center"><i class="fas fa-folder-plus mr-2.5"></i> <span data-i18n="cardCustom">站长推荐</span></h3>
@@ -207,6 +184,9 @@
                     </button>
                 </div>
             </div>
+
+            <!-- 动态分类板块渲染锚点 (常用推荐、效率与开发及新加板块均渲染在此) -->
+            <div id="dynamic-sections-wrapper" class="contents"></div>
 
             <!-- 添加动态分类按钮 (管理员可见) -->
             <div id="add-section-card" class="admin-only glass-card rounded-2xl p-6 flex flex-col items-center justify-center cursor-pointer hover:border-indigo-500/50 transition-all border-dashed border-2 border-slate-500/30 xl:col-span-1" onclick="addCustomSection()" style="min-height: 180px;">
@@ -260,8 +240,40 @@
         let currentModalTarget = 'custom'; 
         let currentEngineKey = 'google';
         
-        // 全局云端配置中心：整合了壁纸、分类区域 和 【新增】管理员密码
+        // 全局云端配置中心：整合了壁纸、动态分类区域 与 管理员密码
         let cloudConfig = { wallpaper: "", dynamicSections: [], adminPwd: "" };
+
+        // 默认初始化板块（当云端没有配置时自动建立“常用推荐”与“效率与开发”）
+        const defaultSections = [
+            {
+                id: 'sec_recommend',
+                name: '常用推荐',
+                icon: 'fa-star',
+                color: 'text-indigo-400',
+                links: [
+                    { name: "GitHub", url: "https://github.com", icon: "fab fa-github text-slate-400" },
+                    { name: "YouTube", url: "https://www.youtube.com/@kejigongxiang", icon: "fab fa-youtube text-red-500" },
+                    { name: "科技共享博客", url: "https://kjgx668.blogspot.com", icon: "fas fa-globe text-blue-400" },
+                    { name: "哔哩哔哩", url: "https://x.com/kejigongxiang", icon: "fas fa-tv text-pink-400" },
+                    { name: "知乎", url: "https://www.zhihu.com", icon: "fab fa-zhihu text-blue-500" },
+                    { name: "微博", url: "https://weibo.com", icon: "fab fa-weibo text-red-400" }
+                ]
+            },
+            {
+                id: 'sec_develop',
+                name: '效率与开发',
+                icon: 'fa-code',
+                color: 'text-purple-400',
+                links: [
+                    { name: "Cloudflare", url: "https://dash.cloudflare.com", icon: "fas fa-cloud text-orange-400" },
+                    { name: "ChatGPT", url: "https://chatgpt.com", icon: "fas fa-robot text-emerald-400" },
+                    { name: "稀土掘金", url: "https://juejin.cn", icon: "fas fa-book text-blue-500" },
+                    { name: "Vercel", url: "https://vercel.com", icon: "fas fa-triangle-exclamation text-slate-300" },
+                    { name: "StackOverflow", url: "https://stackoverflow.com", icon: "fab fa-stack-overflow text-orange-500" },
+                    { name: "CanIUse", url: "https://caniuse.com", icon: "fas fa-browser text-sky-400" }
+                ]
+            }
+        ];
 
         let dragType = null; 
         let dragSecId = null; 
@@ -305,7 +317,7 @@
         };
 
         const dynamicLinkDict = {
-            "https://kjgx668.blogspot.com": { zh: "科技共享", en: "TechShare Blog" },
+            "https://kjgx668.blogspot.com": { zh: "科技共享博客", en: "TechShare Blog" },
             "https://kjgx.168668520.xyz": { zh: "科技共享导航", en: "TechShare Nav" },
             "https://it-toutiao.blogspot.com": { zh: "IT头条博客", en: "IT Toutiao Blog" }
         };
@@ -326,7 +338,7 @@
             loadCustomLinks(); loadFriendLinks(); renderDynamicSections();
         }
 
-        // --- 1. 管理员鉴权 (动态密码校验) ---
+        // --- 1. 管理员鉴权与密码设定 ---
         function checkAdminSession() {
             const isAdmin = localStorage.getItem('nav_admin_auth') === 'true';
             if (isAdmin) { document.body.classList.add('is-admin'); document.getElementById('admin-badge').classList.remove('hidden'); } 
@@ -338,7 +350,6 @@
             const pwd = prompt(t('pwdPrompt'));
             if (pwd === null) return;
             
-            // 【关键】：校验密码时优先使用云端配置，如果没有则使用初始密码 admin888
             const currentValidPwd = cloudConfig.adminPwd || "admin888";
             
             if (pwd === currentValidPwd) { 
@@ -352,7 +363,6 @@
             isCustomLinksExpanded = false; expandedDynamicSections = {}; checkAdminSession(); document.getElementById('theme-panel').classList.add('hidden');
         }
 
-        // 【新增】：修改并同步管理员密码
         async function updateAdminPwd() {
             const newPwd = document.getElementById('custom-pwd-input').value.trim();
             if (!newPwd) return;
@@ -426,335 +436,428 @@
                      toSec.links.push(movedLink);
                  }
             }
-            saveDynamicSections(secs);
+
+            cloudConfig.dynamicSections = secs;
+            renderDynamicSections();
+            saveCloudConfig();
         }
 
-        // --- 3. 云端调度器 (新增 adminPwd 同步) ---
-        async function initCloudData() {
-            const savedTheme = localStorage.getItem('nav_theme_mode') || 'theme-dark';
-            document.body.classList.remove('theme-light', 'theme-dark'); document.body.classList.add(savedTheme);
-            const globalDefaultBg = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"; 
-            let savedBg = localStorage.getItem('nav_custom_wallpaper');
-            cloudConfig.dynamicSections = JSON.parse(localStorage.getItem('nav_dynamic_sections') || '[]');
-            
+        // --- 3. 云端配置与数据管理 ---
+        async function fetchCloudConfig() {
             try {
                 const res = await fetch('/api/config');
-                if (res.ok) {
-                    const configData = await res.json();
-                    if (configData) {
-                        if (configData.wallpaper !== undefined) {
-                            if (configData.wallpaper === "") { savedBg = null; localStorage.removeItem('nav_custom_wallpaper'); document.body.classList.add('bg-cleared'); } 
-                            else { savedBg = configData.wallpaper; localStorage.setItem('nav_custom_wallpaper', savedBg); document.body.classList.remove('bg-cleared'); }
-                        }
-                        if (configData.dynamicSections) { cloudConfig.dynamicSections = configData.dynamicSections; localStorage.setItem('nav_dynamic_sections', JSON.stringify(cloudConfig.dynamicSections)); }
-                        if (configData.adminPwd) { cloudConfig.adminPwd = configData.adminPwd; }
-                    }
+                if(res.ok) {
+                    const data = await res.json();
+                    cloudConfig = data || {};
                 }
-            } catch (e) {}
-
-            if (!savedBg && !document.body.classList.contains('bg-cleared')) savedBg = globalDefaultBg; 
-            if (savedBg) { applyWallpaperStyles(savedBg); document.getElementById('custom-bg-input').value = savedBg; document.getElementById('clear-bg-btn').classList.remove('hidden'); }
+            } catch(e) {
+                console.warn("无法获取云端配置，将使用本地/默认模式", e);
+            }
+            if(!cloudConfig.dynamicSections || cloudConfig.dynamicSections.length === 0) {
+                cloudConfig.dynamicSections = defaultSections;
+            }
+            if(cloudConfig.wallpaper) {
+                setCustomBgUI(cloudConfig.wallpaper);
+            }
             renderDynamicSections();
         }
 
-        async function updateCloudConfig(key, value) {
-            cloudConfig[key] = value;
-            try { await fetch('/api/config', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(cloudConfig) }); } catch (e) { }
+        async function saveCloudConfig() {
+            try {
+                await fetch('/api/config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(cloudConfig)
+                });
+            } catch(e) {
+                console.error("保存云端配置失败", e);
+            }
         }
 
-        function toggleThemeMenu(e) { e.stopPropagation(); document.getElementById('theme-panel').classList.toggle('hidden'); }
-        function setBaseTheme(themeName) { document.body.classList.remove('theme-light', 'theme-dark'); document.body.classList.add(themeName); localStorage.setItem('nav_theme_mode', themeName); document.getElementById('theme-panel').classList.add('hidden'); }
-        function applyWallpaperStyles(url) { document.body.style.backgroundImage = `url('${url}')`; document.body.style.backgroundPosition = 'center'; document.body.style.backgroundSize = 'cover'; document.body.style.backgroundRepeat = 'no-repeat'; document.body.style.backgroundAttachment = 'fixed'; document.body.classList.add('has-custom-bg'); }
+        // --- 4. 动态板块渲染 (包含“常用推荐”与“效率与开发”) ---
+        function renderDynamicSections() {
+            const container = document.getElementById('dynamic-sections-wrapper');
+            if(!container) return;
+            container.innerHTML = '';
 
-        async function applyCustomBg() {
-            const url = document.getElementById('custom-bg-input').value.trim();
-            if (!url) return alert(t('validUrlMsg'));
-            applyWallpaperStyles(url); localStorage.setItem('nav_custom_wallpaper', url); document.body.classList.remove('bg-cleared'); document.getElementById('clear-bg-btn').classList.remove('hidden'); document.getElementById('theme-panel').classList.add('hidden');
-            updateCloudConfig('wallpaper', url);
+            const secs = cloudConfig.dynamicSections || [];
+
+            secs.forEach((sec) => {
+                const isExpanded = expandedDynamicSections[sec.id] || false;
+                const linksToDisplay = isExpanded ? sec.links : sec.links.slice(0, 6);
+
+                let linksHtml = '';
+                linksToDisplay.forEach((link, idx) => {
+                    const iconClass = link.icon || 'fas fa-globe text-indigo-400';
+                    linksHtml += `
+                        <div class="relative group" 
+                             draggable="true" 
+                             ondragstart="handleDragStart(event, 'link', '${sec.id}', ${idx})" 
+                             ondragend="handleDragEnd(event)" 
+                             ondragover="handleDragOver(event, 'link')" 
+                             ondrop="handleDrop(event, 'link', '${sec.id}', ${idx})">
+                            <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-indigo-600/20 transition-all">
+                                <i class="${iconClass} text-xl"></i>
+                                <span class="text-sm font-medium truncate">${getLocalizedLinkName(link.name, link.url)}</span>
+                            </a>
+                            <button onclick="deleteDynamicLink('${sec.id}', ${idx})" class="admin-only absolute -top-1.5 -right-1.5 w-5 h-5 bg-red-500 text-white rounded-full text-[10px] hidden group-hover:flex items-center justify-center shadow hover:bg-red-600 cursor-pointer">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    `;
+                });
+
+                const expandBtnHtml = sec.links.length > 6 ? `
+                    <div class="mt-4 pt-2 border-t border-slate-500/10 text-center">
+                        <button onclick="toggleExpandDynamicSection('${sec.id}')" class="text-xs font-semibold ${sec.color || 'text-indigo-400'} hover:opacity-80 transition-colors cursor-pointer inline-flex items-center gap-1">
+                            <span>${isExpanded ? t('collapseMore') : t('expandMore')}</span>
+                            <i class="fas fa-chevron-${isExpanded ? 'up' : 'down'} text-[10px]"></i>
+                        </button>
+                    </div>
+                ` : '';
+
+                const secCard = document.createElement('div');
+                secCard.className = "dynamic-section-card glass-card rounded-2xl p-6 shadow-xl hover:border-indigo-500/30 transition-all duration-300 xl:col-span-1";
+                secCard.setAttribute('draggable', 'true');
+                secCard.ondragstart = (e) => handleDragStart(e, 'section', sec.id);
+                secCard.ondragend = handleDragEnd;
+                secCard.ondragover = (e) => handleDragOver(e, 'section');
+                secCard.ondrop = (e) => handleDrop(e, 'section', sec.id);
+
+                secCard.innerHTML = `
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold ${sec.color || 'text-indigo-400'} flex items-center cursor-pointer" onclick="renameDynamicSection('${sec.id}')">
+                            <i class="fas ${sec.icon || 'fa-folder'} mr-2.5"></i>
+                            <span>${sec.name}</span>
+                        </h3>
+                        <div class="flex items-center gap-1.5">
+                            <button type="button" onclick="openLinkModal('${sec.id}')" class="admin-only text-xs px-2.5 py-1 bg-indigo-600/20 text-indigo-400 border border-indigo-500/20 rounded-lg hover:bg-indigo-600/40 transition-colors cursor-pointer" data-i18n="addCloud">${t('addCloud')}</button>
+                            <button type="button" onclick="deleteDynamicSection('${sec.id}')" class="admin-only text-xs px-2 py-1 bg-red-600/20 text-red-400 border border-red-500/20 rounded-lg hover:bg-red-600/40 transition-colors cursor-pointer"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 min-h-[50px]">
+                        ${linksHtml}
+                    </div>
+                    ${expandBtnHtml}
+                `;
+
+                container.appendChild(secCard);
+            });
         }
 
-        async function clearCustomBg() {
-            document.body.style.backgroundImage = ''; document.body.classList.remove('has-custom-bg'); localStorage.removeItem('nav_custom_wallpaper'); document.body.classList.add('bg-cleared'); document.getElementById('custom-bg-input').value = ''; document.getElementById('clear-bg-btn').classList.add('hidden'); document.getElementById('theme-panel').classList.add('hidden');
-            updateCloudConfig('wallpaper', "");
-        }
-
-        // --- 4. 动态自定义区域管理 ---
-        function saveDynamicSections(sections) {
-            localStorage.setItem('nav_dynamic_sections', JSON.stringify(sections));
-            updateCloudConfig('dynamicSections', sections);
-            renderDynamicSections();
-        }
-
-        function addCustomSection() {
-            const title = prompt(t('promptSectionName'));
-            if (!title || title.trim() === '') return;
-            let secs = cloudConfig.dynamicSections || [];
-            secs.push({ id: Date.now().toString(), title: title.trim(), links: [] });
-            saveDynamicSections(secs);
-        }
-
-        function renameCustomSection(id) {
-            let secs = cloudConfig.dynamicSections || [];
-            const sec = secs.find(s => s.id === id);
-            if(!sec) return;
-            const newTitle = prompt(t('renameSectionPrompt'), sec.title);
-            if(!newTitle || newTitle.trim() === '' || newTitle === sec.title) return;
-            sec.title = newTitle.trim();
-            saveDynamicSections(secs);
-        }
-
-        function deleteCustomSection(id) {
-            if(!confirm(t('delSectionConfirm'))) return;
-            let secs = cloudConfig.dynamicSections || [];
-            secs = secs.filter(s => s.id !== id);
-            saveDynamicSections(secs);
-        }
-
-        function toggleDynamicSectionExpand(secId) {
+        function toggleExpandDynamicSection(secId) {
             expandedDynamicSections[secId] = !expandedDynamicSections[secId];
             renderDynamicSections();
         }
 
-        function renderDynamicSections() {
-            document.querySelectorAll('.dynamic-section-card').forEach(el => el.remove());
-            const grid = document.getElementById('main-nav-grid');
-            const addBtnCard = document.getElementById('add-section-card');
-            let secs = cloudConfig.dynamicSections || [];
-
-            secs.forEach((sec) => {
-                const isExpanded = !!expandedDynamicSections[sec.id];
-                const linkCount = sec.links.length;
-                const isCompact = linkCount > 6;
-
-                let gridCols = isCompact ? 'grid-cols-3 gap-2' : 'grid-cols-2 gap-3';
-                let visibleLinks = sec.links;
-                let showExpandBtn = false;
-
-                if (linkCount > 9) {
-                    showExpandBtn = true;
-                    if (!isExpanded) {
-                        visibleLinks = sec.links.slice(0, 9);
-                    }
-                }
-
-                const card = document.createElement('div');
-                card.className = "dynamic-section-card glass-card rounded-2xl p-6 shadow-xl hover:border-indigo-500/30 transition-all duration-300 relative xl:col-span-1";
-                card.id = `section-${sec.id}`;
-                card.draggable = true;
-                card.ondragstart = (e) => handleDragStart(e, 'section', sec.id);
-                card.ondragend = handleDragEnd;
-                card.ondragover = (e) => handleDragOver(e, 'section');
-                card.ondrop = (e) => handleDrop(e, 'section', sec.id);
-
-                let linksHtml = '';
-                if (linkCount === 0) {
-                    linksHtml = `<div class="col-span-full text-center text-xs text-slate-400/60 py-4">${t('noCloudLinks')}</div>`;
-                } else {
-                    const pClass = isCompact ? 'p-2' : 'p-3';
-                    const spaceXClass = isCompact ? 'space-x-1.5' : 'space-x-2.5';
-                    const iconSizeClass = isCompact ? 'w-4 h-4 text-[9px]' : 'w-5 h-5 text-[10px]';
-                    const imgSizeClass = isCompact ? 'w-4 h-4' : 'w-5 h-5';
-                    const textSizeClass = isCompact ? 'text-[11px]' : 'text-sm';
-                    const prClass = isCompact ? 'pr-4' : 'pr-5';
-                    const dragMrClass = isCompact ? 'mr-1.5' : 'mr-2.5';
-                    const btnClass = isCompact ? 'right-1 text-[10px] px-1 py-0.5' : 'right-2 text-xs p-1';
-
-                    visibleLinks.forEach((link, idx) => {
-                        const displayName = getLocalizedLinkName(link.name, link.url);
-                        let displayIcon = `<div class="${iconSizeClass} rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold shrink-0">${displayName.charAt(0).toUpperCase()}</div>`;
-                        try { if(link.url) displayIcon = `<img src="https://unavatar.io/duckduckgo/${new URL(link.url).hostname}" draggable="false" onerror="this.style.display='none'" class="${imgSizeClass} rounded object-contain shrink-0" alt="icon" />`; } catch(e){}
-
-                        linksHtml += `
-                        <div class="group relative flex items-center justify-between ${pClass} bg-slate-500/5 border border-slate-500/10 rounded-xl hover:bg-indigo-600/10 transition-all"
-                             draggable="true"
-                             ondragstart="handleDragStart(event, 'link', '${sec.id}', ${idx})"
-                             ondragend="handleDragEnd(event)"
-                             ondragover="handleDragOver(event, 'link')"
-                             ondrop="handleDrop(event, 'link', '${sec.id}', ${idx})">
-                            <div class="flex items-center w-full overflow-hidden">
-                                <i class="fas fa-grip-vertical text-slate-500 opacity-0 group-hover:opacity-50 transition-opacity ${dragMrClass} cursor-move admin-only text-[10px] shrink-0"></i>
-                                <a href="${link.url}" draggable="false" target="_blank" rel="noopener noreferrer" class="flex items-center ${spaceXClass} truncate w-full ${prClass}">
-                                    ${displayIcon} <span class="${textSizeClass} font-medium truncate">${displayName}</span>
-                                </a>
-                            </div>
-                            <button type="button" onclick="deleteSectionLink(event, '${sec.id}', ${idx})" class="admin-only absolute ${btnClass} text-slate-400 hover:text-red-400 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-500/20 rounded cursor-pointer shrink-0"><i class="fas fa-trash-alt"></i></button>
-                        </div>`;
-                    });
-                }
-
-                let expandHtml = '';
-                if (showExpandBtn) {
-                    const btnText = isExpanded
-                        ? `<span data-i18n="collapseMore">${t('collapseMore')}</span> <i class="fas fa-chevron-up text-[10px]"></i>`
-                        : `<span data-i18n="expandMore">${t('expandMore')}</span> (${linkCount - 9}) <i class="fas fa-chevron-down text-[10px]"></i>`;
-                    expandHtml = `
-                        <div class="mt-4 pt-2 border-t border-slate-500/10 text-center">
-                            <button type="button" onclick="toggleDynamicSectionExpand('${sec.id}')" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer inline-flex items-center gap-1">
-                                ${btnText}
-                            </button>
-                        </div>
-                    `;
-                }
-
-                card.innerHTML = `
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="text-lg font-semibold text-indigo-400 flex items-center cursor-move" title="长按拖拽排序" style="cursor: grab;">
-                            <i class="fas fa-grip-vertical mr-2 text-slate-500 opacity-60 admin-only text-sm"></i>
-                            <i class="fas fa-layer-group mr-2.5"></i> <span>${sec.title}</span>
-                        </h3>
-                        <div class="flex gap-1.5 shrink-0 ml-2">
-                            <button type="button" onclick="openLinkModal('section_${sec.id}')" class="admin-only text-[10px] px-2 py-1 bg-indigo-600/20 text-indigo-400 border border-indigo-500/20 rounded-md hover:bg-indigo-600/40 transition-colors cursor-pointer z-[50]">${t('addCloud')}</button>
-                            <button type="button" onclick="renameCustomSection('${sec.id}')" class="admin-only text-[10px] px-2 py-1 bg-sky-600/20 text-sky-400 border border-sky-500/20 rounded-md hover:bg-sky-600/40 transition-colors cursor-pointer z-[50]"><i class="fas fa-pen"></i></button>
-                            <button type="button" onclick="deleteCustomSection('${sec.id}')" class="admin-only text-[10px] px-2 py-1 bg-red-600/20 text-red-400 border border-red-500/20 rounded-md hover:bg-red-600/40 transition-colors cursor-pointer z-[50]"><i class="fas fa-trash"></i></button>
-                        </div>
-                    </div>
-                    <div class="grid ${gridCols}" style="min-height: 40px;" ondragover="handleDragOver(event, 'section')" ondrop="handleDrop(event, 'section', '${sec.id}')">
-                        ${linksHtml}
-                    </div>
-                    ${expandHtml}
-                `;
-                grid.insertBefore(card, addBtnCard);
-            });
-            checkAdminSession();
+        function addCustomSection() {
+            const name = prompt(t('promptSectionName'));
+            if(!name || !name.trim()) return;
+            const newSec = {
+                id: 'sec_' + Date.now(),
+                name: name.trim(),
+                icon: 'fa-folder',
+                color: 'text-indigo-400',
+                links: []
+            };
+            cloudConfig.dynamicSections.push(newSec);
+            renderDynamicSections();
+            saveCloudConfig();
         }
 
-        function deleteSectionLink(e, secId, linkIdx) {
-            e.preventDefault(); e.stopPropagation();
-            let secs = cloudConfig.dynamicSections || [];
-            const sec = secs.find(s => s.id === secId);
-            if(sec) { sec.links.splice(linkIdx, 1); saveDynamicSections(secs); }
-        }
-
-        // --- 5. 智能时间预测系统 ---
-        const sTermNames = ["小寒", "大寒", "立春", "雨水", "惊蛰", "春分", "清明", "谷雨", "立夏", "小满", "芒种", "夏至", "小暑", "大暑", "立秋", "处暑", "白露", "秋分", "寒露", "霜降", "立冬", "小雪", "大雪", "冬至"];
-        const sTermInfo = [0, 21208, 42467, 63836, 85337, 107014, 128867, 150921, 173149, 195551, 218072, 240693, 263343, 285989, 308563, 331033, 353350, 375494, 397447, 419210, 440795, 462224, 483532, 504758];
-        function getSolarTerm(y, m, d) { const baseDate = new Date(1900, 0, 6, 2, 5, 0); const termDate = new Date((31556925974.7 * (y - 1900) + sTermInfo[(m * 2)]) + baseDate.getTime()); if (termDate.getMonth() == m && termDate.getDate() == d) return sTermNames[m * 2]; const termDate2 = new Date((31556925974.7 * (y - 1900) + sTermInfo[(m * 2 + 1)]) + baseDate.getTime()); if (termDate2.getMonth() == m && termDate2.getDate() == d) return sTermNames[m * 2 + 1]; return null; }
-        function updateClockAndGreeting() {
-            const now = new Date(); const y = now.getFullYear(), m = now.getMonth(), d = now.getDate(), h = now.getHours();
-            document.getElementById('clock').innerText = `${String(h).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}:${String(now.getSeconds()).padStart(2, '0')}`;
-            let greetStr = "";
-            if (currentLang === 'zh') {
-                const term = getSolarTerm(y, m, d); const md = `${String(m+1).padStart(2, '0')}${String(d).padStart(2, '0')}`;
-                const fests = { "0101": "元旦快乐", "0308": "妇女节快乐", "0501": "五一劳动节", "0601": "儿童节快乐", "1001": "国庆节快乐", "1225": "圣诞节" }; const fest = fests[md] || null;
-                if (fest) greetStr = `🎉 今天是 ${fest}，祝你开心！`; else if (term) greetStr = `🍃 今日节气 · 【${term}】，顺应四时，平安喜乐。`;
-                else { if (h >= 0 && h < 5) greetStr = "🌙 夜深了，静谧的星空在守护你，早点休息哦"; else if (h >= 5 && h < 8) greetStr = "🌅 清晨的朝阳刚刚升起，新的一天充满希望"; else if (h >= 8 && h < 11.5) greetStr = "☀️ 早上好，专注当下，今天也要元气满满"; else if (h >= 11.5 && h < 13.5) greetStr = "🍲 中午好，记得按时吃饭，歇息一下双眼"; else if (h >= 13.5 && h < 17.5) greetStr = "☕ 下午好，来杯清茶或咖啡，继续保持高效"; else if (h >= 17.5 && h < 19.5) greetStr = "🌇 傍晚好，落日余晖很美，放下疲惫准备享受夜晚吧"; else greetStr = "✨ 晚上好，属于自己的惬意时光，好好犒劳一下自己"; }
-            } else {
-                if (h >= 0 && h < 5) greetStr = "🌙 Late night, the stars are watching over you. Sleep early."; else if (h >= 5 && h < 8) greetStr = "🌅 The morning sun is rising, a new day full of hope."; else if (h >= 8 && h < 11.5) greetStr = "☀️ Good morning! Stay focused and full of energy."; else if (h >= 11.5 && h < 13.5) greetStr = "🍲 Good noon! Remember to eat on time and rest your eyes."; else if (h >= 13.5 && h < 17.5) greetStr = "☕ Good afternoon! Grab a tea or coffee and keep it up."; else if (h >= 17.5 && h < 19.5) greetStr = "🌇 Good evening! The sunset is beautiful. Relax and enjoy."; else greetStr = "✨ Good night! Enjoy your cozy time and treat yourself well.";
+        function renameDynamicSection(secId) {
+            if(localStorage.getItem('nav_admin_auth') !== 'true') return;
+            const sec = cloudConfig.dynamicSections.find(s => s.id === secId);
+            if(!sec) return;
+            const newName = prompt(t('renameSectionPrompt'), sec.name);
+            if(newName && newName.trim()) {
+                sec.name = newName.trim();
+                renderDynamicSections();
+                saveCloudConfig();
             }
-            document.getElementById('greeting').innerText = greetStr;
-        }
-        setInterval(updateClockAndGreeting, 1000);
-
-        // --- 6. 多语言智能天气定位 ---
-        let weatherState = { city: "Earth", temp: 26, code: 0, fetched: false };
-        async function fetchWeather() {
-            try { const ipRes = await fetch('https://ipapi.co/json/'); if(!ipRes.ok) throw new Error(); const ipData = await ipRes.json(); const { latitude, longitude, city } = ipData; if(!latitude || !longitude) throw new Error();
-                const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`); const weatherData = await weatherRes.json();
-                weatherState = { city: city || "Earth", temp: Math.round(weatherData.current_weather.temperature), code: weatherData.current_weather.weathercode, fetched: true };
-            } catch (e) { weatherState.fetched = false; } renderWeather();
-        }
-        function renderWeather() {
-            const el = document.getElementById('weather-info');
-            if (!weatherState.fetched) { el.innerHTML = `<i class="fas fa-cloud text-slate-400"></i> <span>${t('weatherDefault')}</span>`; return; }
-            let displayCity = weatherState.city;
-            if (currentLang === 'zh') { const cityMap = { "Singapore": "新加坡", "Santa Clara": "圣克拉拉", "San Jose": "圣何塞", "Beijing": "北京", "Shanghai": "上海", "Shenzhen": "深圳", "Guangzhou": "广州", "Hangzhou": "杭州", "Chengdu": "成都", "Hong Kong": "香港" }; displayCity = cityMap[displayCity] || displayCity; displayCity = displayCity.replace(/Province|City/gi, "").trim(); }
-            const code = weatherState.code; let icon = 'fa-cloud'; let descKey = 'weatherCloudy';
-            if (code === 0) { icon = 'fa-sun text-amber-500'; descKey = 'weatherClear'; } else if ([1, 2, 3].includes(code)) { icon = 'fa-cloud-sun text-indigo-300'; descKey = 'weatherCloudy'; } else if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) { icon = 'fa-cloud-showers-heavy text-sky-400'; descKey = 'weatherRain'; } else if ([71, 73, 75, 77, 85, 86].includes(code)) { icon = 'fa-snowflake text-blue-200'; descKey = 'weatherSnow'; } else if ([95, 96, 99].includes(code)) { icon = 'fa-bolt text-yellow-500'; descKey = 'weatherThunder'; }
-            el.innerHTML = `<i class="fas ${icon}"></i> <span>${displayCity} · ${t(descKey)} ${weatherState.temp}°C</span>`;
         }
 
-        // --- 7. 搜索引擎配置 ---
-        const engines = { google: { action: 'https://www.google.com/search', name: 'q', placeholderKey: 'searchGoogle', icon: 'fab fa-google text-blue-400' }, bing: { action: 'https://cn.bing.com/search', name: 'q', placeholderKey: 'searchBing', icon: 'fab fa-microsoft text-teal-400' }, baidu: { action: 'https://www.baidu.com/s', name: 'wd', placeholderKey: 'searchBaidu', icon: 'fas fa-paw text-red-400' }, github: { action: 'https://github.com/search', name: 'q', placeholderKey: 'searchGithub', icon: 'fab fa-github text-slate-400' } };
-        function toggleEngineMenu(e) { e.stopPropagation(); document.getElementById('engine-menu').classList.toggle('hidden'); }
-        function selectEngine(key) { currentEngineKey = key; const form = document.getElementById('search-form'); const input = document.getElementById('search-input'); const icon = document.getElementById('engine-icon'); form.action = engines[key].action; input.name = engines[key].name; input.setAttribute('data-i18n-placeholder', engines[key].placeholderKey); input.placeholder = t(engines[key].placeholderKey); icon.className = engines[key].icon; document.getElementById('engine-menu').classList.add('hidden'); }
-
-        // --- 8. 原站长推荐 ---
-        function openLinkModal(target) { currentModalTarget = target; const textEl = document.getElementById('modal-title-text'); if(target === 'friend') textEl.innerText = t('modalAddFriend'); else if(target === 'custom') textEl.innerText = t('modalAddCloud'); else textEl.innerText = t('modalAddSection'); toggleModal(true); }
-        function toggleModal(show) { const modal = document.getElementById('modal'); if (show) { document.getElementById('site-name').value = ''; document.getElementById('site-url').value = ''; modal.classList.remove('hidden'); } else { modal.classList.add('hidden'); } }
-        function closeModalOnBlank(e) { if(e.target.id === 'modal') toggleModal(false); }
-
-        async function saveActiveLink() {
-            const name = document.getElementById('site-name').value.trim(); let url = document.getElementById('site-url').value.trim();
-            if(!name || !url) return alert(currentLang === 'zh' ? '请完整填写名称和网址！' : 'Please fill in both name and URL!');
-            if(!/^https?:\/\//i.test(url)) url = 'https://' + url;
-
-            if (currentModalTarget.startsWith('section_')) {
-                const secId = currentModalTarget.replace('section_', ''); let secs = cloudConfig.dynamicSections || []; const sec = secs.find(s => s.id === secId);
-                if(sec) { sec.links.push({ name, url }); saveDynamicSections(secs); }
-            } else if(currentModalTarget === 'friend') {
-                let links = JSON.parse(localStorage.getItem('nav_friend_links') || '[]'); links.push({ name, url }); localStorage.setItem('nav_friend_links', JSON.stringify(links)); loadFriendLinks();
-            } else {
-                try { const res = await fetch('/api/links'); let links = res.ok ? await res.json() : JSON.parse(localStorage.getItem('nav_custom_links') || '[]'); links.push({ name, url }); await fetch('/api/links', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(links) }); localStorage.setItem('nav_custom_links', JSON.stringify(links)); loadCustomLinks(); } 
-                catch (error) { const links = JSON.parse(localStorage.getItem('nav_custom_links') || '[]'); links.push({ name, url }); localStorage.setItem('nav_custom_links', JSON.stringify(links)); loadCustomLinks(); }
-            } toggleModal(false);
+        function deleteDynamicSection(secId) {
+            if(!confirm(t('delSectionConfirm'))) return;
+            cloudConfig.dynamicSections = cloudConfig.dynamicSections.filter(s => s.id !== secId);
+            renderDynamicSections();
+            saveCloudConfig();
         }
 
+        function deleteDynamicLink(secId, linkIdx) {
+            if(!confirm(t('delConfirm'))) return;
+            const sec = cloudConfig.dynamicSections.find(s => s.id === secId);
+            if(sec) {
+                sec.links.splice(linkIdx, 1);
+                renderDynamicSections();
+                saveCloudConfig();
+            }
+        }
+
+        // --- 5. 传统站长推荐 & 友情链接逻辑 ---
         async function loadCustomLinks() {
-            const container = document.getElementById('custom-links-container'); const actionWrapper = document.getElementById('expand-action-wrapper');
-            container.innerHTML = `<div class="col-span-full text-center text-xs text-slate-400/60 py-10"><i class="fas fa-spinner fa-spin"></i> ${t('loadingCloud')}</div>`;
-            let links = []; try { const res = await fetch('/api/links'); if(res.ok) links = await res.json(); else throw new Error(); } catch(e) { links = JSON.parse(localStorage.getItem('nav_custom_links') || '[]'); }
+            const container = document.getElementById('custom-links-container');
+            if(!container) return;
+            try {
+                const res = await fetch('/api/links');
+                if(res.ok) {
+                    const links = await res.json();
+                    renderCustomLinksUI(links);
+                }
+            } catch(e) {
+                container.innerHTML = `<div class="text-xs text-slate-500">${t('noCloudLinks')}</div>`;
+            }
+        }
+
+        function renderCustomLinksUI(links) {
+            const container = document.getElementById('custom-links-container');
+            const wrapper = document.getElementById('expand-action-wrapper');
+            if(!container) return;
             container.innerHTML = '';
             
-            if(links.length === 0) { 
-                container.innerHTML = `<div class="col-span-full text-center text-xs text-slate-400/60 py-10">${t('noCloudLinks')}</div>`; 
-                actionWrapper.classList.add('hidden'); 
-                container.className = 'grid grid-cols-2 gap-3';
-                return; 
+            if(!links || links.length === 0) {
+                container.innerHTML = `<div class="text-xs text-slate-500 py-2">${t('noCloudLinks')}</div>`;
+                if(wrapper) wrapper.classList.add('hidden');
+                return;
             }
 
-            const isCompact = links.length > 6;
-            container.className = isCompact ? 'grid grid-cols-3 gap-2' : 'grid grid-cols-2 gap-3';
-
-            let visibleLinks = links;
-            let showExpandBtn = false;
-            if (links.length > 9) { showExpandBtn = true; if (!isCustomLinksExpanded) visibleLinks = links.slice(0, 9); }
-
-            const pClass = isCompact ? 'p-2' : 'p-3'; const spaceXClass = isCompact ? 'space-x-1.5' : 'space-x-2.5';
-            const iconSizeClass = isCompact ? 'w-4 h-4 text-[9px]' : 'w-5 h-5 text-[10px]'; const imgSizeClass = isCompact ? 'w-4 h-4' : 'w-5 h-5';
-            const textSizeClass = isCompact ? 'text-[11px]' : 'text-sm'; const prClass = isCompact ? 'pr-4' : 'pr-5'; const btnClass = isCompact ? 'right-1 text-[10px] px-1 py-0.5' : 'right-2 text-xs p-1';
-
-            visibleLinks.forEach((item, index) => {
-                const displayName = getLocalizedLinkName(item.name, item.url);
-                let displayIcon = `<div class="${iconSizeClass} rounded-full bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold shrink-0">${displayName.charAt(0).toUpperCase()}</div>`;
-                try { if(item.url) displayIcon = `<img src="https://unavatar.io/duckduckgo/${new URL(item.url).hostname}" draggable="false" onerror="this.style.display='none'" class="${imgSizeClass} rounded object-contain shrink-0" alt="icon" />`; } catch(err){}
-                
-                container.innerHTML += `
-                    <div class="group relative flex items-center justify-between ${pClass} bg-slate-500/5 border border-slate-500/10 rounded-xl hover:bg-indigo-600/10 transition-all">
-                        <div class="flex items-center w-full overflow-hidden">
-                            <a href="${item.url}" draggable="false" target="_blank" rel="noopener noreferrer" class="flex items-center ${spaceXClass} truncate w-full ${prClass}">
-                                ${displayIcon} <span class="${textSizeClass} font-medium truncate">${displayName}</span>
-                            </a>
-                        </div>
-                        <button type="button" onclick="deleteCustomLink(event, ${index})" class="admin-only absolute ${btnClass} text-slate-400 hover:text-red-400 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-500/20 rounded cursor-pointer shrink-0"><i class="fas fa-trash-alt"></i></button>
-                    </div>`;
+            const linksToDisplay = isCustomLinksExpanded ? links : links.slice(0, 6);
+            let html = '<div class="grid grid-cols-2 gap-3">';
+            linksToDisplay.forEach((link, idx) => {
+                html += `
+                    <div class="relative group">
+                        <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 p-3 bg-slate-500/5 rounded-xl hover:bg-pink-600/20 transition-all">
+                            <i class="fas fa-bookmark text-xl text-pink-400"></i>
+                            <span class="text-sm font-medium truncate">${getLocalizedLinkName(link.name, link.url)}</span>
+                        </a>
+                        <button onclick="deleteCustomLink(${idx})" class="admin-only absolute -top-1.5 -right-1.5 w-5 h-5 bg-red-500 text-white rounded-full text-[10px] hidden group-hover:flex items-center justify-center shadow hover:bg-red-600 cursor-pointer">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `;
             });
+            html += '</div>';
+            container.innerHTML = html;
 
-            if (showExpandBtn) { 
-                actionWrapper.classList.remove('hidden'); const btn = document.getElementById('expand-btn'); 
-                btn.innerHTML = isCustomLinksExpanded ? `<span data-i18n="collapseMore">${t('collapseMore')}</span> <i class="fas fa-chevron-up text-[10px]"></i>` : `<span data-i18n="expandMore">${t('expandMore')}</span> (${links.length - 9}) <i class="fas fa-chevron-down text-[10px]"></i>`; 
-            } else { actionWrapper.classList.add('hidden'); }
+            if(wrapper) {
+                if(links.length > 6) {
+                    wrapper.classList.remove('hidden');
+                    document.getElementById('expand-btn').innerHTML = `<span>${isCustomLinksExpanded ? t('collapseMore') : t('expandMore')}</span> <i class="fas fa-chevron-${isCustomLinksExpanded ? 'up' : 'down'} text-[10px]"></i>`;
+                } else {
+                    wrapper.classList.add('hidden');
+                }
+            }
         }
 
-        function toggleExpandCustomLinks() { isCustomLinksExpanded = !isCustomLinksExpanded; loadCustomLinks(); }
-        async function deleteCustomLink(e, index) { e.preventDefault(); e.stopPropagation(); if(!confirm(t('delConfirm'))) return; try { const res = await fetch('/api/links'); let links = res.ok ? await res.json() : JSON.parse(localStorage.getItem('nav_custom_links') || '[]'); links.splice(index, 1); await fetch('/api/links', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(links) }); localStorage.setItem('nav_custom_links', JSON.stringify(links)); if(links.length <= 9) isCustomLinksExpanded = false; loadCustomLinks(); } catch(error) { const links = JSON.parse(localStorage.getItem('nav_custom_links') || '[]'); links.splice(index, 1); localStorage.setItem('nav_custom_links', JSON.stringify(links)); if(links.length <= 9) isCustomLinksExpanded = false; loadCustomLinks(); } }
+        function toggleExpandCustomLinks() {
+            isCustomLinksExpanded = !isCustomLinksExpanded;
+            loadCustomLinks();
+        }
+
+        async function deleteCustomLink(index) {
+            if(!confirm(t('delConfirm'))) return;
+            try {
+                await fetch(`/api/links?index=${index}`, { method: 'DELETE' });
+                loadCustomLinks();
+            } catch(e) { console.error(e); }
+        }
 
         function loadFriendLinks() {
-            const container = document.getElementById('friend-links-container'); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; container.innerHTML = '';
-            if(links.length === 0) { links = [ { name: "IT头条博客", url: "https://it-toutiao.blogspot.com" }, { name: "科技共享导航", url: "https://kjgx.168668520.xyz" } ]; }
-            links.forEach((item, index) => {
-                const displayName = getLocalizedLinkName(item.name, item.url);
+            const container = document.getElementById('friend-links-container');
+            if(!container) return;
+            const friends = JSON.parse(localStorage.getItem('friend_links') || '[]');
+            container.innerHTML = '';
+            friends.forEach((link, idx) => {
                 container.innerHTML += `
-                    <div class="group relative flex items-center justify-between p-2.5 bg-slate-500/5 border border-slate-500/10 rounded-xl hover:bg-emerald-600/10 transition-all text-center">
-                        <a href="${item.url}" draggable="false" target="_blank" rel="noopener noreferrer" class="w-full text-xs font-medium text-slate-400 hover:text-emerald-400 transition-colors truncate px-2">${displayName}</a>
-                        <button type="button" onclick="deleteFriendLink(event, ${index})" class="admin-only absolute right-1 text-[10px] text-slate-500 hover:text-red-400 opacity-0 group-hover:opacity-100 transition-opacity bg-slate-500/10 px-1 rounded cursor-pointer"><i class="fas fa-times"></i></button>
-                    </div>`;
+                    <div class="relative group">
+                        <a href="${link.url}" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center p-2.5 bg-slate-500/5 rounded-xl hover:bg-emerald-600/20 transition-all text-xs font-medium text-slate-300 hover:text-emerald-400 truncate">
+                            ${link.name}
+                        </a>
+                        <button onclick="deleteFriendLink(${idx})" class="admin-only absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white rounded-full text-[9px] hidden group-hover:flex items-center justify-center shadow hover:bg-red-600 cursor-pointer">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `;
             });
         }
-        function deleteFriendLink(e, index) { e.preventDefault(); e.stopPropagation(); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; if(links.length === 0) { links = [ { name: "IT头条博客", url: "https://it-toutiao.blogspot.com" }, { name: "科技共享导航", url: "https://kjgx.168668520.xyz" } ]; } links.splice(index, 1); localStorage.setItem('nav_friend_links', JSON.stringify(links)); loadFriendLinks(); }
 
-        // --- 初始化运转 ---
-        document.addEventListener('click', () => { document.getElementById('engine-menu').classList.add('hidden'); document.getElementById('theme-panel').classList.add('hidden'); });
-        checkAdminSession(); document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en'; applyLanguage(); updateClockAndGreeting(); fetchWeather(); initCloudData();
+        function deleteFriendLink(idx) {
+            if(!confirm(t('delConfirm'))) return;
+            const friends = JSON.parse(localStorage.getItem('friend_links') || '[]');
+            friends.splice(idx, 1);
+            localStorage.setItem('friend_links', JSON.stringify(friends));
+            loadFriendLinks();
+        }
+
+        // --- 6. 模态框与保存逻辑 ---
+        function openLinkModal(target) {
+            currentModalTarget = target;
+            const titleText = document.getElementById('modal-title-text');
+            if(target === 'custom') titleText.innerText = t('modalAddCloud');
+            else if(target === 'friend') titleText.innerText = t('modalAddFriend');
+            else titleText.innerText = t('modalAddSection');
+            
+            document.getElementById('site-name').value = '';
+            document.getElementById('site-url').value = '';
+            toggleModal(true);
+        }
+
+        function toggleModal(show) {
+            const modal = document.getElementById('modal');
+            if(show) modal.classList.remove('hidden');
+            else modal.classList.add('hidden');
+        }
+
+        function closeModalOnBlank(e) {
+            if(e.target.id === 'modal') toggleModal(false);
+        }
+
+        async function saveActiveLink() {
+            const name = document.getElementById('site-name').value.trim();
+            let url = document.getElementById('site-url').value.trim();
+            if(!name || !url) { alert(t('validUrlMsg')); return; }
+            if(!/^https?:\/\//i.test(url)) url = 'https://' + url;
+
+            if(currentModalTarget === 'custom') {
+                try {
+                    await fetch('/api/links', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ name, url })
+                    });
+                    loadCustomLinks();
+                } catch(e) { console.error(e); }
+            } else if(currentModalTarget === 'friend') {
+                const friends = JSON.parse(localStorage.getItem('friend_links') || '[]');
+                friends.push({ name, url });
+                localStorage.setItem('friend_links', JSON.stringify(friends));
+                loadFriendLinks();
+            } else {
+                // 保存到动态板块
+                const sec = cloudConfig.dynamicSections.find(s => s.id === currentModalTarget);
+                if(sec) {
+                    sec.links.push({ name, url, icon: 'fas fa-globe text-indigo-400' });
+                    renderDynamicSections();
+                    saveCloudConfig();
+                }
+            }
+            toggleModal(false);
+        }
+
+        // --- 7. 主题与背景设置 ---
+        function toggleThemeMenu(e) {
+            e.stopPropagation();
+            document.getElementById('theme-panel').classList.toggle('hidden');
+        }
+
+        function setBaseTheme(theme) {
+            document.body.className = theme + (document.body.classList.contains('is-admin') ? ' is-admin' : '') + (cloudConfig.wallpaper ? ' has-custom-bg' : '');
+            localStorage.setItem('nav_theme', theme);
+        }
+
+        function applyCustomBg() {
+            const url = document.getElementById('custom-bg-input').value.trim();
+            if(!url) return;
+            cloudConfig.wallpaper = url;
+            setCustomBgUI(url);
+            saveCloudConfig();
+        }
+
+        function setCustomBgUI(url) {
+            document.body.style.backgroundImage = `url('${url}')`;
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundPosition = 'center';
+            document.body.style.backgroundAttachment = 'fixed';
+            document.body.classList.add('has-custom-bg');
+            document.getElementById('clear-bg-btn').classList.remove('hidden');
+        }
+
+        function clearCustomBg() {
+            cloudConfig.wallpaper = "";
+            document.body.style.backgroundImage = '';
+            document.body.classList.remove('has-custom-bg');
+            document.getElementById('clear-bg-btn').classList.add('hidden');
+            document.getElementById('custom-bg-input').value = '';
+            saveCloudConfig();
+        }
+
+        // --- 8. 搜索引擎切换逻辑 ---
+        const engines = {
+            google: { action: "https://www.google.com/search", name: "q", icon: "fab fa-google text-blue-400", placeholderKey: "searchGoogle" },
+            bing: { action: "https://www.bing.com/search", name: "q", icon: "fab fa-microsoft text-teal-400", placeholderKey: "searchBing" },
+            baidu: { action: "https://www.baidu.com/s", name: "wd", icon: "fas fa-paw text-red-400", placeholderKey: "searchBaidu" },
+            github: { action: "https://github.com/search", name: "q", icon: "fab fa-github text-slate-400", placeholderKey: "searchGithub" }
+        };
+
+        function toggleEngineMenu(e) {
+            e.stopPropagation();
+            document.getElementById('engine-menu').classList.toggle('hidden');
+        }
+
+        function selectEngine(key) {
+            currentEngineKey = key;
+            const conf = engines[key];
+            const form = document.getElementById('search-form');
+            const input = document.getElementById('search-input');
+            const icon = document.getElementById('engine-icon');
+            
+            form.action = conf.action;
+            input.name = conf.name;
+            input.placeholder = t(conf.placeholderKey);
+            icon.className = conf.icon;
+            document.getElementById('engine-menu').classList.add('hidden');
+        }
+
+        // --- 9. 时间与天气组件 ---
+        function updateClockAndGreeting() {
+            const now = new Date();
+            const h = String(now.getHours()).padStart(2, '0');
+            const m = String(now.getMinutes()).padStart(2, '0');
+            const s = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').innerText = `${h}:${m}:${s}`;
+
+            const hour = now.getHours();
+            let greetingStr = '';
+            if(hour < 6) greetingStr = currentLang === 'zh' ? '夜深了，注意休息' : 'Late night, take rest';
+            else if(hour < 12) greetingStr = currentLang === 'zh' ? '早安，祝今天好心情' : 'Good morning!';
+            else if(hour < 18) greetingStr = currentLang === 'zh' ? '下午好，保持高效' : 'Good afternoon!';
+            else greetingStr = currentLang === 'zh' ? '晚上好，享受时光' : 'Good evening!';
+            document.getElementById('greeting').innerText = greetingStr;
+        }
+
+        async function renderWeather() {
+            const weatherEl = document.getElementById('weather-info');
+            try {
+                const res = await fetch('https://wttr.in/?format=j1');
+                if(res.ok) {
+                    const data = await res.json();
+                    const condition = data.current_condition[0];
+                    const temp = condition.temp_C;
+                    weatherEl.innerHTML = `<i class="fas fa-sun text-amber-400"></i> <span>${temp}°C</span>`;
+                    return;
+                }
+            } catch(e) {}
+            weatherEl.innerHTML = `<i class="fas fa-cloud-sun text-emerald-400"></i> <span>${t('weatherDefault')}</span>`;
+        }
+
+        // 全局事件监听：点击空白关闭弹窗与浮窗
+        window.onclick = function() {
+            document.getElementById('theme-panel').classList.add('hidden');
+            document.getElementById('engine-menu').classList.add('hidden');
+        };
+
+        // 初始化运行
+        window.addEventListener('DOMContentLoaded', () => {
+            const localTheme = localStorage.getItem('nav_theme') || 'theme-dark';
+            setBaseTheme(localTheme);
+            checkAdminSession();
+            applyLanguage();
+            fetchCloudConfig();
+            
+            setInterval(updateClockAndGreeting, 1000);
+            updateClockAndGreeting();
+            renderWeather();
+        });
     </script>
 </body>
 </html>
